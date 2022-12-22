@@ -103,7 +103,7 @@ export const CodeItem = styled.pre`
     margin-left: 1rem;
   }
   span.purple {
-    color: #c38cdd;
+    color: #d95d7e;
   }
   span.blue {
     color: #7ac7e3;
