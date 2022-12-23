@@ -29,6 +29,7 @@ module.exports = {
     'space-before-function-paren': 'off',
     'react/prop-types': 'off',
     'import/prefer-default-export': 'off',
-    'jsx-ally/anchor-is-valid': 'off'
+    'jsx-ally/anchor-is-valid': 'off',
+    'react/require-default-props':'off'
   }
 };
