@@ -6,7 +6,7 @@ interface ITitleSectionProps {
   description?: string | ReactNode;
 }
 
-function TitleSection({title, description}: ITitleSectionProps) {
+function TitleSection({ title, description }: ITitleSectionProps) {
   return (
     <Container>
       <h1>#{title}</h1>
@@ -15,4 +15,4 @@ function TitleSection({title, description}: ITitleSectionProps) {
   );
 }
 
-export default TitleSection
+export default TitleSection;

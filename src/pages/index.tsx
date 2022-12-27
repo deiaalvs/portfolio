@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <HomeContainer>
       <Header />
-      <main className='container'>
+      <main className="container">
         <HomeHero />
         <Experiences />
       </main>
