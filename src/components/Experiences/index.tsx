@@ -35,10 +35,26 @@ export function Experiences() {
         description="de experiência"
       />
       <section>
-        <ExperienceItem />
-        <ExperienceItem />
-        <ExperienceItem />
-        <ExperienceItem />
+        <ExperienceItem
+          year="2022"
+          title="Desenvolvedora FullStack Junior"
+          description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas magni beatae explicabo error laboriosam est in nam similique temporibus? Ad."
+        />
+        <ExperienceItem
+          year="2022"
+          title="Desenvolvedora FullStack Junior"
+          description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas magni beatae explicabo error laboriosam est in nam similique temporibus? Ad."
+        />
+        <ExperienceItem
+          year="2022"
+          title="Desenvolvedora FullStack Junior"
+          description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas magni beatae explicabo error laboriosam est in nam similique temporibus? Ad."
+        />
+        <ExperienceItem
+          year="2022"
+          title="Desenvolvedora FullStack Junior"
+          description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas magni beatae explicabo error laboriosam est in nam similique temporibus? Ad."
+        />
       </section>
     </Container>
   );
