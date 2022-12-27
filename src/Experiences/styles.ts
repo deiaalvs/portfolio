@@ -53,4 +53,59 @@ export const ItemContainer = styled.div`
     font-size: 1rem;
     font-weight: 300;
   }
+
+  &:hover > div {
+    filter: brightness(1.3);
+    transform: translateY(-28px);
+  }
+
+  &:nth-child(even) > div {
+    margin-top: 4rem;
+  }
+
+  @media (max-width: 1000px) {
+    > div {
+      height: auto;
+      padding-top: 1.5rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 700px) {
+    &:hover > div {
+      transform: translateY(0);
+    }
+
+    &:nth-child(even) > div {
+      margin-top: 0;
+    }
+
+    > div {
+      height: auto;
+      padding-top: 2rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
 `;
