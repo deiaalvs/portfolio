@@ -1,16 +1,53 @@
-import { ReactNode } from 'react';
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import Link from 'next/link';
+import TitleSection from '../TitleSection';
+import ProjectItem from './ProjectItem';
+import ecommerce from '../../assets/ecommerce.png';
 
 import { Container } from './styles';
 
-interface ProjectsProps {
-  children: ReactNode;
-}
-
-export function Projects({ children }: ProjectsProps) {
+export function Projects() {
   return (
     <Container>
-      <h1>Projects</h1>
-      {children}
+      <TitleSection title="Últimos Projetos" />
+
+      <section>
+        <ProjectItem
+          projectName="Projeto 01"
+          projectType="Ecommerce"
+          projectLink="projetos"
+          projectImg={ecommerce}
+        />
+        <ProjectItem
+          projectName="Projeto 01"
+          projectType="Ecommerce"
+          projectLink="projetos"
+          projectImg={ecommerce}
+        />
+        <ProjectItem
+          projectName="Projeto 01"
+          projectType="Ecommerce"
+          projectLink="projetos"
+          projectImg={ecommerce}
+        />
+        <ProjectItem
+          projectName="Projeto 01"
+          projectType="Ecommerce"
+          projectLink="projetos"
+          projectImg={ecommerce}
+        />
+        <ProjectItem
+          projectName="Projeto 01"
+          projectType="Ecommerce"
+          projectLink="projetos"
+          projectImg={ecommerce}
+        />
+      </section>
+      <button type="button">
+        <Link href="/projetos">
+          <a>Ver todos os projetos</a>
+        </Link>
+      </button>
     </Container>
   );
 }
