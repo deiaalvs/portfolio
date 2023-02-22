@@ -3,6 +3,7 @@ import { HomeHero } from '../components/HomeHero';
 import { Experiences } from '../components/Experiences';
 import { HomeContainer } from '../styles/HomeContainer.styles';
 import { Projects } from '../components/Projects';
+import { TechExpertise } from '../components/TechExpertise';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <HomeHero />
         <Experiences />
         <Projects />
+        <TechExpertise />
       </main>
     </HomeContainer>
   );
