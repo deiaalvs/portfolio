@@ -3,45 +3,36 @@ import Link from 'next/link';
 import TitleSection from '../TitleSection';
 import ProjectItem from './ProjectItem';
 import ecommerce from '../../assets/ecommerce.png';
-
 import { Container } from './styles';
 
-export function Projects() {
+interface IProjectProps {
+  projectId: string;
+  projectName: string;
+  projectType: string;
+  projectDescription: string;
+  projectLink: string;
+  projectImg: string;
+}
+
+interface IHomeProps {
+  projects: IProjectProps[];
+}
+
+export function Projects({ projects }: IHomeProps) {
   return (
     <Container>
       <TitleSection title="Últimos Projetos" />
 
       <section>
-        <ProjectItem
-          projectName="Projeto 01"
-          projectType="Ecommerce"
-          projectLink="projetos"
-          projectImg={ecommerce}
-        />
-        <ProjectItem
-          projectName="Projeto 01"
-          projectType="Ecommerce"
-          projectLink="projetos"
-          projectImg={ecommerce}
-        />
-        <ProjectItem
-          projectName="Projeto 01"
-          projectType="Ecommerce"
-          projectLink="projetos"
-          projectImg={ecommerce}
-        />
-        <ProjectItem
-          projectName="Projeto 01"
-          projectType="Ecommerce"
-          projectLink="projetos"
-          projectImg={ecommerce}
-        />
-        <ProjectItem
-          projectName="Projeto 01"
-          projectType="Ecommerce"
-          projectLink="projetos"
-          projectImg={ecommerce}
-        />
+        {projects.slice(0, 3).map(project => (
+          <ProjectItem
+            key={project.projectId}
+            projectName={project.projectName}
+            projectType={project.projectType}
+            projectLink={project.projectId}
+            projectImg={project.projectImg}
+          />
+        ))}
       </section>
       <button type="button">
         <Link href="/projetos">
