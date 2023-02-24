@@ -1,10 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Prismic from '@prismicio/client';
+import { useRouter } from 'next/router';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { Header } from '../../../components/Header';
 import { ProjectBanner } from '../../../components/ProjectBanner';
 import { ProjectDetailContainer } from '../../../styles/ProjectDetailStyles';
 import { getPrismicClient } from '../../../services/prismic';
+import { LoadingScreen } from '../../../components/LoadingScreen';
 
 interface IProjectProps {
   projectName: string;
@@ -21,6 +23,11 @@ interface IHomeProps {
 export default function ProjectDetail({ projects }: IHomeProps) {
   function handleProjectView() {
     window.open(projects.projectLink);
+  }
+
+  const router = useRouter();
+  if (router.isFallback) {
+    return <LoadingScreen />;
   }
 
   return (
