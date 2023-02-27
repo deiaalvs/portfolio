@@ -8,7 +8,7 @@ interface ITitleSectionProps {
 
 function TitleSection({ title, description }: ITitleSectionProps) {
   return (
-    <Container>
+    <Container data-aos="fade-right">
       <h1>#{title}</h1>
       {description && <h2>{description}</h2>}
     </Container>

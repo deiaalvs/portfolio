@@ -11,7 +11,7 @@ export default function TechExpertiseItem({
   icon
 }: ITechExpertiseItemProps) {
   return (
-    <TechExpertiseContainer>
+    <TechExpertiseContainer data-aos="fade-up">
       <p>{title}</p>
       {icon}
     </TechExpertiseContainer>
