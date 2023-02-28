@@ -2,6 +2,7 @@
 import Prismic from '@prismicio/client';
 import { useRouter } from 'next/router';
 import { GetStaticPaths, GetStaticProps } from 'next';
+import Head from 'next/head';
 import { Header } from '../../../components/Header';
 import { ProjectBanner } from '../../../components/ProjectBanner';
 import { ProjectDetailContainer } from '../../../styles/ProjectDetailStyles';
@@ -32,6 +33,15 @@ export default function ProjectDetail({ projects }: IHomeProps) {
 
   return (
     <ProjectDetailContainer>
+      <Head>
+        <title>{projects.projectName} | Meu portfólio</title>
+        <meta name="description" content={projects.projectDescription} />
+        <meta property="og:image" content={projects.projectImg} />
+        <meta property="og:image:secure_url" content={projects.projectImg} />
+        <meta name="twitter:image" content={projects.projectImg} />
+        <meta name="twitter:image:src" content={projects.projectImg} />
+        <meta property="og:description" content={projects.projectDescription} />
+      </Head>
       <Header />
       <ProjectBanner
         projectName={projects.projectName}
